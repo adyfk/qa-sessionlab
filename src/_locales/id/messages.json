@@ -1,0 +1,23 @@
+{
+  "appName": {
+    "message": "QA SessionLab — Banyak Login untuk Tester"
+  },
+  "appShortName": {
+    "message": "SessionLab"
+  },
+  "appDesc": {
+    "message": "Login sebagai Admin, Customer dan Guest di situs yang sama, berdampingan. Matriks role, perekam bug, emulasi perangkat & data uji."
+  },
+  "cmdOpen": {
+    "message": "Buka QA SessionLab"
+  },
+  "cmdNew": {
+    "message": "Buka halaman ini di sesi terisolasi sementara yang baru"
+  },
+  "cmdRec": {
+    "message": "Mulai / hentikan rekaman bug di tab ini"
+  },
+  "cmdShot": {
+    "message": "Tambahkan tangkapan layar ke rekaman aktif"
+  }
+}

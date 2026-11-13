@@ -1,0 +1,23 @@
+{
+  "appName": {
+    "message": "QA SessionLab — 测试人员的多账号标签页"
+  },
+  "appShortName": {
+    "message": "SessionLab"
+  },
+  "appDesc": {
+    "message": "在同一网站上以 Admin、Customer 和 Guest 身份同时登录。角色矩阵、Bug 录制、设备模拟和测试数据。"
+  },
+  "cmdOpen": {
+    "message": "打开 QA SessionLab"
+  },
+  "cmdNew": {
+    "message": "在新的临时隔离会话中打开当前页面"
+  },
+  "cmdRec": {
+    "message": "在此标签页开始 / 停止录制 Bug"
+  },
+  "cmdShot": {
+    "message": "向当前录制添加截图"
+  }
+}

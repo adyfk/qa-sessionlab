@@ -1,0 +1,10 @@
+node_modules/
+dist/
+*.zip
+e2e/.profile/
+e2e/artifacts/
+
+# private, machine-specific checks (not published)
+e2e/local/
+.DS_Store
+_site/

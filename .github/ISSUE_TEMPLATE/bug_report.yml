@@ -1,0 +1,28 @@
+name: Bug report
+description: Something does not work as expected
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: "Security problem? Please report it privately instead — see SECURITY.md."
+  - type: input
+    id: version
+    attributes: { label: QA SessionLab version, placeholder: "1.3.0" }
+    validations: { required: true }
+  - type: input
+    id: browser
+    attributes: { label: Browser and version, placeholder: "Chrome 142 on macOS" }
+    validations: { required: true }
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Tip — the built-in bug recorder (Alt+Shift+R) can write this for you. Remove any cookies or private URLs.
+    validations: { required: true }
+  - type: textarea
+    id: expected
+    attributes: { label: Expected vs. actual result }
+    validations: { required: true }
+  - type: textarea
+    id: extra
+    attributes: { label: Extra context (site type, service worker / CSP, console errors) }

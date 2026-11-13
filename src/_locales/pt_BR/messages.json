@@ -1,0 +1,23 @@
+{
+  "appName": {
+    "message": "QA SessionLab — Vários logins para testers"
+  },
+  "appShortName": {
+    "message": "SessionLab"
+  },
+  "appDesc": {
+    "message": "Entre como Admin, Customer e Guest no mesmo site, lado a lado. Matriz de papéis, gravador de bugs, emulação e dados de teste."
+  },
+  "cmdOpen": {
+    "message": "Abrir o QA SessionLab"
+  },
+  "cmdNew": {
+    "message": "Abrir esta página em uma nova sessão isolada temporária"
+  },
+  "cmdRec": {
+    "message": "Iniciar / parar a gravação de bugs nesta aba"
+  },
+  "cmdShot": {
+    "message": "Adicionar uma captura à gravação ativa"
+  }
+}

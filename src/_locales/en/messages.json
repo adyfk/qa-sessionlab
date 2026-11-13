@@ -1,0 +1,23 @@
+{
+  "appName": {
+    "message": "QA SessionLab — Multi-Login Tabs for Testers"
+  },
+  "appShortName": {
+    "message": "SessionLab"
+  },
+  "appDesc": {
+    "message": "Log in as Admin, Customer and Guest on the same site, side by side. Role matrix, bug recorder, device emulation & test data."
+  },
+  "cmdOpen": {
+    "message": "Open QA SessionLab"
+  },
+  "cmdNew": {
+    "message": "Open the current page in a new temporary isolated session"
+  },
+  "cmdRec": {
+    "message": "Start / stop bug recording on this tab"
+  },
+  "cmdShot": {
+    "message": "Add a screenshot to the active recording"
+  }
+}

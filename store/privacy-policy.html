@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QA SessionLab — Privacy Policy</title>
+<style>
+  :root { --bg:#fff; --fg:#1f2328; --muted:#59636e; --line:#d9dde3; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#1b1d21; --fg:#e6e8eb; --muted:#9aa3ad; --line:#3a3f46; } }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+  main { max-width:720px; margin:0 auto; padding:48px 16px; }
+  h1 { font-size:28px; margin:0 0 4px; } h2 { font-size:18px; margin-top:32px; }
+  p.muted, li.muted { color:var(--muted); } code { font-size:14px; }
+  ul { padding-left:20px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>QA SessionLab — Privacy Policy</h1>
+  <p class="muted">Last updated: 14 November 2026</p>
+
+  <h2>Summary</h2>
+  <p>QA SessionLab works entirely inside your browser. It has no servers, no user accounts, no analytics and no tracking. The developer never receives, sees or stores any of your data.</p>
+
+  <h2>What the extension handles, locally</h2>
+  <ul>
+    <li><strong>Session data:</strong> cookies, localStorage and snapshots of the websites you open inside QA SessionLab sessions, so each session stays logged in separately.</li>
+    <li><strong>Bug recordings you start:</strong> the steps you take, console errors, failed network requests and screenshots of the tab you record. Password-like fields are masked by default.</li>
+    <li><strong>Settings:</strong> session names, colours, notes and emulation presets.</li>
+  </ul>
+  <p>All of this is stored with <code>chrome.storage</code> on your device only. It is used only to provide the features you use, and it is deleted when you delete a session or recording, or uninstall the extension.</p>
+
+  <h2>What is never done</h2>
+  <ul>
+    <li>No data is transmitted to the developer or any third party.</li>
+    <li>No data is sold, shared, or used for advertising, profiling or creditworthiness.</li>
+    <li>No remote code is loaded or executed.</li>
+  </ul>
+
+  <h2>Data you export</h2>
+  <p>Files you choose to export (bug reports, Playwright storageState, backups) are saved where you choose. A backup with "Include logins" or a storageState file contains login cookies: treat it like a password.</p>
+
+  <h2>Permissions</h2>
+  <p>The extension needs access to the websites you test in order to isolate their cookies and storage per session. The debugger permission is used only on a tab where you turn on device/network emulation or start a bug recording.</p>
+
+  <h2>Contact</h2>
+  <p>Questions or concerns: open an issue at <a href="https://github.com/adyfk/qa-sessionlab/issues">github.com/adyfk/qa-sessionlab/issues</a>, or report security problems privately via <a href="https://github.com/adyfk/qa-sessionlab/security/advisories/new">GitHub security advisories</a>.</p>
+</main>
+</body>
+</html>

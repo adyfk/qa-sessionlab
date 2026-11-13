@@ -1,0 +1,23 @@
+{
+  "appName": {
+    "message": "QA SessionLab — テスター向けマルチログイン"
+  },
+  "appShortName": {
+    "message": "SessionLab"
+  },
+  "appDesc": {
+    "message": "同じサイトに Admin・Customer・Guest として同時にログイン。ロールマトリクス、バグレコーダー、デバイスエミュレーション、テストデータ。"
+  },
+  "cmdOpen": {
+    "message": "QA SessionLab を開く"
+  },
+  "cmdNew": {
+    "message": "このページを新しい一時分離セッションで開く"
+  },
+  "cmdRec": {
+    "message": "このタブのバグ録画を開始 / 停止"
+  },
+  "cmdShot": {
+    "message": "録画中のレポートにスクリーンショットを追加"
+  }
+}

@@ -1,0 +1,148 @@
+/** Source strings (English). Placeholders: {name}. Plural pairs use _one / _other. */
+export const en = {
+  // common
+  'c.save': 'Save', 'c.saved': 'Saved', 'c.copy': 'Copy', 'c.copied': 'Copied', 'c.cancel': 'Cancel', 'c.confirm': 'Confirm',
+  'c.delete': 'Delete', 'c.back': '← Back', 'c.open': 'Open', 'c.loading': 'Loading…', 'c.reset': 'Reset', 'c.add': 'Add',
+  'c.import': 'Import', 'c.new': '↻ New', 'c.go': 'Go', 'c.temp': 'temp', 'c.emulated': 'emulated', 'c.on': 'on',
+
+  // tabs / header
+  'nav.sessions': 'Sessions', 'nav.matrix': 'Matrix', 'nav.recorder': 'Recorder', 'nav.data': 'Test data', 'nav.settings': 'Settings',
+  'hdr.rec': 'REC', 'hdr.activeSession': 'Session of the active tab', 'hdr.default': 'default', 'hdr.defaultTitle': 'The active tab uses your normal browser profile',
+
+  // popup
+  'pop.panel': 'Panel ↗', 'pop.panelTitle': 'Open the full side panel', 'pop.thisTab': 'This tab',
+  'pop.notIsolated': 'Default profile · not isolated', 'pop.moveLabel': 'Move this tab to a session',
+  'pop.defaultOption': 'Default profile (no isolation)', 'pop.newTempOption': '+ New temporary session',
+  'pop.movedNew': 'Moved to a new session', 'pop.moved': 'Tab moved — reloading',
+  'pop.record': '● Record bug', 'pop.stopRecording': 'Stop recording', 'pop.recSaved': 'Recording saved — see panel', 'pop.recording': 'Recording…',
+  'pop.screenshot': '📷 Screenshot', 'pop.shotAdded': 'Screenshot added', 'pop.shotTaken': 'Screenshot taken (start a recording to keep it)',
+  'pop.fill': '✎ Fill form', 'pop.filled': 'Form filled', 'pop.openHttp': 'Open a http(s) page to isolate it.',
+  'pop.openAs': 'Open this page as…', 'pop.sessions': 'Sessions', 'pop.filter': 'Filter',
+  'pop.noSessions': 'No sessions yet. Create one below — each gets its own cookies & storage.',
+  'pop.tabs_one': '{n} tab', 'pop.tabs_other': '{n} tabs', 'pop.openUrlAs': 'Open {url} as {name}', 'pop.openName': 'Open {name}',
+  'pop.newPh': 'New session, e.g. Admin', 'pop.newAria': 'New session name', 'pop.openBtn': '+ Open',
+  'pop.tempHint': 'Temporary (deleted when its last tab closes)', 'pop.kbNew': 'new temp session', 'pop.kbRec': 'record',
+
+  // sessions panel
+  's.newTitle': 'New isolated session', 's.namePh': 'Name / role, e.g. Admin', 's.nameAria': 'Session name', 's.group': 'Group',
+  's.temporary': 'Temporary', 's.createOpenPage': 'Create & open this page', 's.createOpen': 'Create & open', 's.created': 'Session created',
+  's.quickRoles': 'Quick roles:', 's.added': 'Added {name}', 's.rbac': '+ RBAC set', 's.rbacTitle': 'Create Admin, Staff, Customer and Guest at once',
+  's.rbacCreated': 'RBAC set created', 's.search': 'Search {n} sessions', 's.import': '⤒ Import',
+  's.importTitle': 'Import a Playwright storageState JSON or an encrypted shared session',
+  's.imported': 'Imported as a new session', 's.invalidJson': 'Invalid JSON: {msg}',
+  's.empty': 'No sessions yet.', 's.emptyLong': 'Each session is a separate login: its own cookies, localStorage and IndexedDB, inside normal tabs of this window.',
+  's.ungrouped': 'Ungrouped', 's.detailsFor': 'Details for {name}', 's.thisTab': 'this tab',
+  's.openTabs_one': '{n} open tab', 's.openTabs_other': '{n} open tabs', 's.noTabs': 'no open tabs',
+  's.focus': 'Focus its tab', 's.openStart': 'Open start URL',
+  's.sharedFile': 'Encrypted session: {file}', 's.passphraseFor': 'Passphrase', 's.wrongPass': 'Wrong passphrase or damaged file',
+
+  // session detail
+  'd.name': 'Name', 'd.groupPh': 'e.g. Staging', 'd.colour': 'Colour', 'd.renamed': 'Renamed',
+  'd.startUrl': 'Start URL (used by Open & Matrix when no page is given)',
+  'd.notes': 'Notes (test account, password hint, role permissions…)',
+  'd.tempLong': 'Temporary — delete automatically when its last tab closes',
+  'd.env': 'Environment emulation', 'd.device': 'Device', 'd.noDevice': 'No device emulation', 'd.network': 'Network', 'd.noThrottle': 'No throttling',
+  'd.locale': 'Locale / Accept-Language', 'd.browserDefault': 'browser default', 'd.timezone': 'Timezone', 'd.scheme': 'Colour scheme',
+  'd.system': 'System', 'd.light': 'Light', 'd.dark': 'Dark', 'd.geo': 'Geolocation', 'd.realGeo': 'Real location', 'd.custom': 'Custom',
+  'd.reducedMotion': 'prefers-reduced-motion', 'd.presetApplied': 'Preset applied to open tabs',
+  'd.debuggerNote': 'Device size, network and colour scheme use Chrome’s debugger: a “started debugging” bar appears on those tabs. Close DevTools on that tab first.',
+  'd.snapshots': 'Snapshots', 'd.snapHint': 'Save the logged-in state (cookies, localStorage and IndexedDB of open tabs) and jump back to it after destructive tests.',
+  'd.snapPh': 'Label, e.g. fresh cart, after onboarding', 'd.snapSaved': 'Snapshot saved', 'd.restore': 'Restore', 'd.restored': 'Restored — tabs reloading',
+  'd.deleteSnap': 'Delete snapshot', 'd.snapMeta': '{date} · {cookies} cookies · {origins} origins',
+  'd.cookies': 'Cookies', 'd.noCookies': 'No cookies yet — log in inside a tab of this session.',
+  'd.colName': 'Name', 'd.colDomain': 'Domain', 'd.colFlags': 'Flags', 'd.sessionCookie': 'session',
+  'd.clone': '⇣ Clone login from default profile', 'd.cloneTitle': 'Copy your normal (default profile) cookies for {host} into this session',
+  'd.openWebFirst': 'Open a web page first', 'd.cloned': 'Copied {n} cookies from your default profile',
+  'd.exportPw': '⤓ Playwright storageState', 'd.copyJson': 'Copy JSON', 'd.jsonCopied': 'storageState copied',
+  'd.duplicate': 'Duplicate', 'd.duplicated': 'Duplicated (with cookies)', 'd.clear': 'Log out / clear',
+  'd.confirmClear': 'Clear all cookies and storage of “{name}”? Its tabs will reload logged out.', 'd.cleared': 'Session data cleared',
+  'd.confirmDelete': 'Delete “{name}”? Its tabs go back to the default profile.', 'd.deleted': 'Deleted',
+  'd.share': '⇪ Share with team', 'd.shareTitle': 'Share with a teammate (encrypted)',
+  'd.shareHint': 'Creates an encrypted file with this login. Send the file and the passphrase through different channels — anyone with both can act as this user.',
+  'd.sharePass': 'Passphrase (min. 8 characters)', 'd.shareCreate': 'Create encrypted file', 'd.shareTooShort': 'Use at least 8 characters', 'd.shareDone': 'Encrypted file downloaded',
+
+  // matrix
+  'm.title': 'Role matrix', 'm.hint': 'Open one page as several roles at once and compare what each can see or do.',
+  'm.url': 'URL', 'm.select': 'Select:', 'm.all': 'All', 'm.none': 'None', 'm.createFirst': 'Create sessions first (Sessions tab → Quick roles).',
+  'm.tiled': 'Tiled windows', 'm.tabs': 'Tabs in this window', 'm.open': 'Open {n} side by side', 'm.opened': 'Opened {n} roles',
+  'm.drive': 'Drive all matrix tabs', 'm.goAll': 'Go to URL in every role', 'm.navigated': 'Navigated all',
+  'm.back': '← Back', 'm.reload': '⟳ Reload all', 'm.close': 'Close all',
+
+  // recorder
+  'r.title': 'Bug recorder', 'r.hint': 'Records your clicks & inputs, console errors, failed requests and screenshots on the current tab, then writes the bug report for you.',
+  'r.titlePh': 'Bug title (optional)', 'r.start': '● Start recording this tab', 'r.started': 'Recording started', 'r.switch': 'Switch to a web page tab to record.',
+  'r.steps': '{n} steps', 'r.console': '{n} console', 'r.failed': '{n} failed req', 'r.shots': '{n} shots', 'r.errors': '{n} errors', 'r.failedReq': '{n} failed requests', 'r.screenshots': '{n} screenshots',
+  'r.notePh': 'Add a note / observation', 'r.noteAdded': 'Note added', 'r.shot': '📷 Screenshot', 'r.shotAdded': 'Screenshot added',
+  'r.stop': '■ Stop & review', 'r.saved': 'Saved', 'r.list': 'Saved recordings', 'r.empty': 'Nothing recorded yet. Tip: {key} toggles recording on any tab.',
+  'r.confirmDelete': 'Delete this recording?', 'r.bugTitle': 'Bug title', 'r.copy': 'Copy report', 'r.copied': 'Markdown copied — paste into Jira/GitHub',
+  'r.dlShots': '⤓ Screenshots', 'r.preview': 'Report preview (editable)', 'r.consoleErrors': 'Console errors ({n})', 'r.failedList': 'Failed requests ({n})',
+  'r.shotN': 'Screenshot {n}',
+
+  // test data
+  't.identity': 'Test identity', 't.fill': '✎ Fill page form', 't.fillTitle': 'Fill visible empty fields on the current page',
+  't.f.fullName': 'Name', 't.f.email': 'Email', 't.f.username': 'Username', 't.f.password': 'Password', 't.f.phone': 'Phone', 't.f.birthDate': 'Birth date',
+  't.f.street': 'Street', 't.f.city': 'City', 't.f.province': 'Province', 't.f.postalCode': 'Postal code', 't.f.company': 'Company', 't.f.nik': 'NIK (fake)', 't.f.npwp': 'NPWP (fake)',
+  't.copyField': 'Copy {name}', 't.emailHint': 'Emails use {pattern} and are unique per click. Right-click any input → QA SessionLab for more.',
+  't.quick': 'Quick values', 't.cards': 'Payment test cards', 't.cardsHint': 'Publicly documented sandbox numbers — any future expiry and CVC work in most gateways’ test mode.',
+  't.edge': 'Edge cases & boundary values', 't.edgeHint': 'Click to copy, or right-click an input → QA SessionLab → Insert edge case.',
+  'q.email': 'Unique email', 'q.name': 'Full name', 'q.phone': 'Phone (ID)', 'q.password': 'Strong password', 'q.address': 'Address',
+  'q.nik': 'NIK (16 digits, fake)', 'q.card': 'Test card (Visa 4111…)', 'q.uuid': 'UUID', 'q.lorem': 'Lorem paragraph',
+  'e.empty': 'Empty string', 'e.spaces': 'Only whitespace', 'e.trim': 'Leading/trailing spaces', 'e.long255': '255 chars', 'e.long256': '256 chars (boundary+1)',
+  'e.long5k': '5,000 chars', 'e.unicode': 'Unicode / accents', 'e.emoji': 'Emoji (surrogate pairs)', 'e.rtl': 'RTL text', 'e.zeroWidth': 'Zero-width chars',
+  'e.quotes': 'Quotes \' " `', 'e.sqlQuote': 'SQL quote probe', 'e.htmlTag': 'HTML escaping probe', 'e.templateInj': 'Template probe', 'e.pathTraversal': 'Path probe',
+  'e.negative': 'Negative number', 'e.zero': 'Zero', 'e.decimal': 'Decimal comma', 'e.bigInt': 'Huge number', 'e.maxInt32': 'INT32 max+1',
+  'e.sciNotation': 'Scientific notation', 'e.dateInvalid': 'Invalid date', 'e.dateLeap': 'Leap day', 'e.emailPlus': 'Email with +tag',
+  'e.emailInvalid': 'Invalid email', 'e.emailIdn': 'IDN email', 'e.newline': 'Multi-line', 'e.nullStr': '"null" / "undefined"',
+
+  // settings
+  'set.language': 'Language', 'set.auto': 'Automatic (browser language)',
+  'set.behaviour': 'Behaviour',
+  'set.groups': 'Coloured tab groups per session', 'set.groupsHint': 'Session tabs are grouped and coloured; groups also re-attach tabs after a browser restart.',
+  'set.title': 'Show [Session] in tab titles', 'set.titleHint': 'Makes screenshots and screen recordings self-explanatory.',
+  'set.inherit': 'Links opened from a session tab stay in that session', 'set.inheritHint': 'Covers target=_blank, window.open and middle-click.',
+  'set.mask': 'Mask passwords / OTP / card fields in recordings', 'set.maskHint': 'Recorded steps show •••••• instead of the value.',
+  'set.emailDomain': 'Test email domain (use one your mail catcher receives, e.g. mailinator.com or your Mailpit domain)',
+  'set.ai': 'AI control (MCP)', 'set.aiHint': 'Let an AI agent (Claude Code, Claude Desktop, Cursor…) drive SessionLab: create roles, open pages as a role, read/click/type, compare roles, record bugs. Local only, protected by the token below.',
+  'set.aiAllow': 'Allow AI control', 'set.aiConnected': '● connected', 'set.aiConnecting': 'connecting…', 'set.aiWaiting': 'waiting for the MCP server',
+  'set.port': 'Port', 'set.token': 'Token', 'set.tokenCopied': 'Token copied', 'set.register': 'Register with Claude Code (replace the folder path)',
+  'set.cmdCopied': 'Command copied', 'set.newToken': 'Generate new token', 'set.aiNoServer': 'No MCP server is running on 127.0.0.1:{port} yet', 'set.aiWrongToken': 'The MCP server used a different token — copy the token again',
+  'set.sw': 'Service workers', 'set.swHint': 'A site’s service worker would load pages outside the session (always signed out). SessionLab turns service workers off on sites where you use sessions. Allow one again to test offline/PWA behaviour in your normal profile.',
+  'set.swNone': 'No sites yet.', 'set.swAllow': 'Allow again', 'set.swAllowed': 'Allowed again',
+  'set.backup': 'Backup & move to another computer', 'set.backupHint': 'Exports sessions, settings, colours, presets and notes. Cookies are included only if you tick the box — treat that file like a password.',
+  'set.includeLogins': 'Include logins (cookies & snapshots)', 'set.export': '⤓ Export backup', 'set.importBackup': '⤒ Import backup',
+  'set.imported_one': 'Imported {n} session', 'set.imported_other': 'Imported {n} sessions',
+  'set.shortcuts': 'Keyboard shortcuts', 'set.kbPopup': 'open popup', 'set.kbNew': 'current page in a new temporary session', 'set.kbRec': 'start / stop recording',
+  'set.customize': 'Customize shortcuts…', 'set.guide': 'Getting started guide',
+  'set.how': 'How isolation works & limits',
+  'set.how1': 'Each session has its own cookie jar. Requests from its tabs carry only that jar’s cookies (SameSite rules included); your normal profile is never sent and never changed.',
+  'set.how2': 'document.cookie, localStorage, IndexedDB, Cache Storage and BroadcastChannel are separated per session — also inside Web Workers when the site’s CSP allows it.',
+  'set.how3': 'Documents and API calls of session tabs bypass the HTTP cache, so one role never sees another role’s cached data.',
+  'set.how4': 'Service workers, shared workers and speculative prerendering are turned off for session tabs (their requests can’t be tied to a tab).',
+  'set.how5': 'Chrome can’t pause requests, so the redirect right after a login can race the cookie update; SessionLab replaces that page before it renders.',
+  'set.how6': 'HTTP Basic Auth and “Save link as…” downloads are shared with the normal profile.',
+
+  // welcome
+  'w.title': 'Welcome to QA SessionLab', 'w.subtitle': 'Many logins on the same site, side by side, in normal tabs. Built for testers.',
+  'w.start': 'Start in 10 seconds', 'w.url': 'Your app’s URL (optional)', 'w.create': 'Create Admin · Customer · Guest', 'w.createHint': 'Opens the side panel; rename or add roles any time.',
+  'w.created': 'Created {names}. Log in once in each — they stay separate.', 'w.exists': 'Your roles already exist — open the side panel to use them.',
+  'w.s1': 'Pin it', 'w.s1b': 'Click the puzzle icon in the toolbar and pin QA SessionLab, so the session of every tab is one glance away.',
+  'w.s2': 'Create your roles', 'w.s2b': 'Each session is a separate login with its own cookies and storage — Admin, Customer and Guest side by side on the same site.',
+  'w.s3': 'Test & report', 'w.s3b': 'Open the Role matrix to compare roles, press Alt+Shift+R to record a bug, and paste the generated report into Jira or GitHub.',
+  'w.rightClick': 'Right-click any input → QA SessionLab for test data and edge cases.',
+  'w.privacy': 'Privacy: everything stays in your browser. QA SessionLab has no servers, no analytics and sends nothing anywhere.',
+
+  // content script / context menu
+  'cs.filled_one': 'Filled {n} field as {name}', 'cs.filled_other': 'Filled {n} fields as {name}', 'cs.recOn': '● Recording started', 'cs.recOff': '■ Recording stopped',
+  'menu.openNew': 'Open link in a NEW isolated session', 'menu.openSame': 'Open link in this tab’s session', 'menu.fill': 'Fill form with test data',
+  'menu.insert': 'Insert test value', 'menu.edge': 'Insert edge case', 'menu.shot': 'Screenshot into active recording',
+
+  // report
+  'rep.env': 'Environment', 'rep.url': 'URL', 'rep.session': 'Session / role', 'rep.ua': 'User agent', 'rep.viewport': 'Viewport · language · timezone',
+  'rep.emulation': 'Emulation', 'rep.recorded': 'Recorded', 'rep.steps': 'Steps to reproduce', 'rep.expected': 'Expected result', 'rep.expectedPh': '_Describe what should happen._',
+  'rep.actual': 'Actual result', 'rep.actualPh': '_Describe what happened instead._', 'rep.summary': 'Summary',
+  'rep.consoleLine': 'Console errors/exceptions: **{e}**, warnings: **{w}**', 'rep.failedLine': 'Failed / 4xx-5xx requests: **{n}**',
+  'rep.shotsLine': 'Screenshots: **{n}** (attached separately)', 'rep.consoleErrors': 'Console errors', 'rep.failed': 'Failed requests',
+  'rep.cols': '| time | method | status | url |', 'rep.footer': '_Generated by QA SessionLab_',
+} as const;
+
+export type MessageKey = keyof typeof en;
