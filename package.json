@@ -1,9 +1,9 @@
 {
   "name": "qa-sessionlab",
-  "version": "1.3.0",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "QA SessionLab \u2014 isolated per-tab sessions, role matrix, env presets, bug recorder and test data for QA engineers.",
+  "description": "QA SessionLab — isolated per-tab sessions, role matrix, env presets, bug recorder and test data for QA engineers.",
   "license": "MIT",
   "author": "Adi Fatkhurozi",
   "homepage": "https://github.com/adyfk/qa-sessionlab#readme",

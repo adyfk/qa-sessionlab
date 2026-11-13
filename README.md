@@ -30,22 +30,25 @@ a bug recorder that writes the report for you, test-data tools, and an MCP bridg
 | **6 languages** | English, Bahasa Indonesia, Español, Português (BR), 日本語, 简体中文 — follows the browser or pick one in Settings. |
 | **Private** | No servers, no analytics, no remote code. |
 
-## Install
+## Install (1 minute)
 
-**From source (developer mode)**
+1. **[⬇ Download qa-sessionlab.zip](https://github.com/adyfk/qa-sessionlab/releases/latest/download/qa-sessionlab.zip)** (latest release) and unzip it.
+2. Open `chrome://extensions` (Edge: `edge://extensions`) and switch on **Developer mode** (top right).
+3. Click **Load unpacked** and select the unzipped folder.
+4. Pin the extension (🧩 icon in the toolbar). A welcome page opens with a one-click setup.
+
+Works in Chrome, Edge, Brave and other Chromium browsers (version 116+). To update, unzip the new version over the same
+folder and click ↻ on the extension card. All versions: [Releases](https://github.com/adyfk/qa-sessionlab/releases).
+
+<details><summary>Build from source instead</summary>
 
 ```bash
 git clone https://github.com/adyfk/qa-sessionlab.git
 cd qa-sessionlab
 npm ci
-npm run build
+npm run build    # then "Load unpacked" → dist/
 ```
-
-Open `chrome://extensions` (or `edge://extensions`), enable **Developer mode**, click **Load unpacked** and pick the
-`dist/` folder. A welcome page opens with a one-click setup.
-
-**From a release** — download `qa-sessionlab.zip` from [Releases](https://github.com/adyfk/qa-sessionlab/releases),
-unzip it and load the folder the same way.
+</details>
 
 ## Quick start
 

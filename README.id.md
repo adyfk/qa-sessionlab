@@ -26,17 +26,25 @@ bisa menguji dengannya.
 | **6 bahasa** | English, Bahasa Indonesia, Español, Português (BR), 日本語, 简体中文 — mengikuti browser atau dipilih di Pengaturan. |
 | **Privat** | Tanpa server, tanpa analitik, tanpa kode jarak jauh. |
 
-## Instalasi
+## Instalasi (1 menit)
+
+1. **[⬇ Unduh qa-sessionlab.zip](https://github.com/adyfk/qa-sessionlab/releases/latest/download/qa-sessionlab.zip)** (rilis terbaru) lalu ekstrak.
+2. Buka `chrome://extensions` (Edge: `edge://extensions`) dan aktifkan **Developer mode** (kanan atas).
+3. Klik **Load unpacked**, pilih folder hasil ekstrak.
+4. Sematkan ekstensinya (ikon 🧩 di toolbar). Halaman sambutan terbuka dengan setup satu klik.
+
+Berjalan di Chrome, Edge, Brave dan browser Chromium lain (versi 116+). Untuk update, ekstrak versi baru ke folder yang
+sama lalu klik ↻ di kartu ekstensi. Semua versi: [Releases](https://github.com/adyfk/qa-sessionlab/releases).
+
+<details><summary>Atau build dari source</summary>
 
 ```bash
 git clone https://github.com/adyfk/qa-sessionlab.git
 cd qa-sessionlab
 npm ci
-npm run build
+npm run build    # lalu "Load unpacked" → dist/
 ```
-
-Buka `chrome://extensions`, aktifkan **Developer mode**, klik **Load unpacked**, pilih folder `dist/`.
-Atau unduh `qa-sessionlab.zip` dari [Releases](https://github.com/adyfk/qa-sessionlab/releases).
+</details>
 
 ## Cara pakai singkat
 

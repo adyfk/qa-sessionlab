@@ -89,9 +89,9 @@ async function connect() {
     ws = null;
     status = status === 'off' ? 'off' : 'waiting';
     // Keep trying while AI control is on (the MCP server may start later or restart):
-    // quick at first, then back off to 15s so an idle browser stays quiet. The 30s alarm also retries.
+    // quick at first, then back off to 5s (a cheap failed localhost connect) so a freshly started MCP server is picked up quickly. The 30s alarm also retries.
     clearTimeout(retryTimer);
-    retryDelay = Math.min(retryDelay * 2, 15_000);
+    retryDelay = Math.min(retryDelay * 2, 5_000);
     retryTimer = setTimeout(() => void connect(), retryDelay);
   };
   sock.onerror = () => { lastError = 'noServer'; };

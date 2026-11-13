@@ -23,7 +23,7 @@ const C = {
     desc: 'Free, open-source Chrome & Edge extension for testers: log in as Admin, Customer and Guest on the same website side by side in normal tabs. Role matrix for RBAC testing, snapshots, Playwright storageState, device emulation, bug recorder and AI (MCP) control.',
     h1: 'Many logins. Same site. <em>Side by side.</em>',
     lead: 'QA SessionLab is a free, open-source Chrome and Edge extension that turns normal tabs into isolated sessions — so you can test as Admin, Customer and Guest on the same app at the same time, without extra browser profiles or incognito windows.',
-    ctaInstall: 'Get it on GitHub', ctaHow: 'How it works',
+    ctaInstall: '⬇ Download free', ctaHow: 'How it works',
     featuresTitle: 'Everything a tester needs for multi-account testing',
     features: [
       ['Isolated sessions per tab', 'Each session has its own cookies, localStorage, IndexedDB and cache. Real-browser cookie rules: HttpOnly, Secure, SameSite. Your normal profile is never touched.'],
@@ -43,7 +43,7 @@ const C = {
       ['Compare and report', 'Open the role matrix to compare what each role sees, then press Alt+Shift+R to record a bug report.'],
     ],
     installTitle: 'Install',
-    install: 'Download the latest <code>qa-sessionlab.zip</code> from GitHub Releases, unzip it, open <code>chrome://extensions</code>, enable Developer mode and choose “Load unpacked”. Or build from source:',
+    install: '<a href="https://github.com/adyfk/qa-sessionlab/releases/latest/download/qa-sessionlab.zip"><b>Download qa-sessionlab.zip</b></a> (latest release), unzip it, open <code>chrome://extensions</code>, enable Developer mode and choose “Load unpacked”. Or build from source:',
     aiTitle: 'Let AI test your app',
     ai: 'Register the zero-dependency MCP server and ask your AI assistant to log in as several roles and compare pages objectively:',
     faqTitle: 'Frequently asked questions',
@@ -66,7 +66,7 @@ const C = {
     desc: 'Ekstensi Chrome & Edge gratis dan open source untuk tester: login sebagai Admin, Customer dan Guest di website yang sama secara berdampingan di tab biasa. Matriks role untuk uji RBAC, snapshot, Playwright storageState, emulasi perangkat, perekam bug dan kontrol AI (MCP).',
     h1: 'Banyak login. Situs yang sama. <em>Berdampingan.</em>',
     lead: 'QA SessionLab adalah ekstensi Chrome dan Edge gratis dan open source yang mengubah tab biasa menjadi sesi terisolasi — sehingga Anda bisa menguji sebagai Admin, Customer dan Guest di aplikasi yang sama secara bersamaan, tanpa profil browser tambahan atau jendela incognito.',
-    ctaInstall: 'Dapatkan di GitHub', ctaHow: 'Cara kerjanya',
+    ctaInstall: '⬇ Unduh gratis', ctaHow: 'Cara kerjanya',
     featuresTitle: 'Semua yang dibutuhkan tester untuk uji multi-akun',
     features: [
       ['Sesi terisolasi per tab', 'Setiap sesi punya cookie, localStorage, IndexedDB dan cache sendiri. Aturan cookie seperti browser asli: HttpOnly, Secure, SameSite. Profil normal Anda tidak pernah tersentuh.'],
@@ -86,7 +86,7 @@ const C = {
       ['Bandingkan dan laporkan', 'Buka matriks role untuk membandingkan apa yang dilihat tiap role, lalu tekan Alt+Shift+R untuk merekam laporan bug.'],
     ],
     installTitle: 'Instalasi',
-    install: 'Unduh <code>qa-sessionlab.zip</code> terbaru dari GitHub Releases, ekstrak, buka <code>chrome://extensions</code>, aktifkan Developer mode lalu pilih “Load unpacked”. Atau build dari source:',
+    install: '<a href="https://github.com/adyfk/qa-sessionlab/releases/latest/download/qa-sessionlab.zip"><b>Unduh qa-sessionlab.zip</b></a> (rilis terbaru), ekstrak, buka <code>chrome://extensions</code>, aktifkan Developer mode lalu pilih “Load unpacked”. Atau build dari source:',
     aiTitle: 'Biarkan AI menguji aplikasi Anda',
     ai: 'Daftarkan server MCP (tanpa dependensi) lalu minta asisten AI Anda login sebagai beberapa role dan membandingkan halaman secara objektif:',
     faqTitle: 'Pertanyaan yang sering diajukan',
@@ -190,7 +190,7 @@ footer{padding:30px 0 50px;color:var(--fg2);font-size:15px;border-top:1px solid 
 <div class="hero">
   <h1>${c.h1}</h1>
   <p class="lead">${esc(c.lead)}</p>
-  <div class="cta"><a class="btn primary" href="${REPO}">${c.ctaInstall}</a><a class="btn" href="#how">${c.ctaHow}</a></div>
+  <div class="cta"><a class="btn primary" href="#install">${c.ctaInstall}</a><a class="btn" href="${REPO}">GitHub</a><a class="btn" href="#how">${c.ctaHow}</a></div>
   <div class="shot"><img src="${rel}assets/screenshot-1-side-by-side.png" width="1280" height="800" alt="${esc(c.h1.replace(/<[^>]+>/g, ''))} — QA SessionLab"></div>
 </div>
 <section id="features"><h2>${c.featuresTitle}</h2><div class="grid">

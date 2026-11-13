@@ -93,7 +93,7 @@ function onExtMessage(conn, text) {
 const hmac = (msg) => crypto.createHmac('sha256', TOKEN).update(msg).digest('hex');
 const safeEqual = (a, b) => typeof a === 'string' && a.length === b.length && crypto.timingSafeEqual(Buffer.from(a), Buffer.from(b));
 
-async function waitForExtension(ms = 8000) {
+async function waitForExtension(ms = 20000) {
   const end = Date.now() + ms;
   while (!ext && Date.now() < end) await new Promise((r) => setTimeout(r, 100));
   if (!ext) throw new Error(`QA SessionLab is not connected. In Chrome: QA SessionLab → Settings → AI control → turn it on (port ${PORT}) and make sure QSL_TOKEN matches.`);

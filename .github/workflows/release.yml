@@ -20,4 +20,5 @@ jobs:
       - uses: softprops/action-gh-release@v2
         with:
           files: qa-sessionlab.zip
+          body_path: .github/release-notes.md
           generate_release_notes: true

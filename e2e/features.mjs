@@ -107,9 +107,13 @@ const wrong = await callErr('importShare', { file, passphrase: 'not the secret' 
 check('Wrong passphrase is rejected', /WRONG_PASSPHRASE/.test(wrong ?? ''), wrong);
 const imported = await call('importShare', { file, passphrase: 'team secret 123' });
 const ti = await call('openInSession', { id: imported.id, url: `${APP}/page` });
-const pi = await pageOf(ti);
-await sleep(800);
-check('Teammate import logs in as the shared user', (await pi.locator('#srv').innerText()) === 'alice', imported.name);
+// read through the extension API: Playwright can lose track of a new tab whose first navigation Chrome aborted
+let importedWho = '';
+for (let i = 0; i < 80 && importedWho !== 'alice'; i++) {
+  importedWho = await d.evaluate(async (id) => (await chrome.scripting.executeScript({ target: { tabId: id }, func: () => document.querySelector('#srv')?.textContent ?? '' }).catch(() => [{ result: '' }]))[0]?.result ?? '', ti);
+  if (importedWho !== 'alice') await sleep(100);
+}
+check('Teammate import logs in as the shared user', importedWho === 'alice', `${imported.name}: ${importedWho}`);
 
 // ---- localization ----
 await call('saveSettings', { patch: { language: 'id' } });
