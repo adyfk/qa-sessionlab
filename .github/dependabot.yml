@@ -5,6 +5,10 @@ updates:
     schedule: { interval: weekly }
     groups:
       dev-dependencies: { patterns: ["*"] }
+    ignore:
+      # Preact 11 dropped automatic "px" for numeric inline styles; the UI relies on Preact 10 behaviour.
+      - dependency-name: preact
+        update-types: ["version-update:semver-major"]
   - package-ecosystem: github-actions
     directory: /
     schedule: { interval: monthly }
