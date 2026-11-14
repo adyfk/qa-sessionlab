@@ -99,6 +99,9 @@ try {
       if (!/^http/.test(url)) await sleep(100);
     }
     for (let i = 0; i < 100; i++) {
+      // Chromium can replace a tab's target before Playwright attaches to it; one reload gives
+      // Playwright a fresh target to discover (harness only — the tab itself is already correct).
+      if (i === 50) await driver.evaluate((id) => chrome.tabs.reload(id), tabId).catch(() => {});
       // tag each tab via its id, then find the matching Playwright page
       for (const p of ctx.pages()) {
         const id = await p.evaluate(() => window.__qslTab).catch(() => undefined);
