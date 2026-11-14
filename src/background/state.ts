@@ -21,10 +21,19 @@ export async function getSettings(): Promise<Settings> {
   const { settings } = await local.get('settings');
   return { ...DEFAULT_SETTINGS, ...(settings ?? {}) };
 }
-export async function saveSettings(patch: Partial<Settings>): Promise<Settings> {
-  const s = { ...(await getSettings()), ...patch };
-  await local.set({ settings: s });
-  return s;
+/**
+ * Read-modify-write under a lock: two concurrent saves (e.g. the install migration and a user
+ * change) must not overwrite each other with a stale copy.
+ */
+let settingsLock: Promise<unknown> = Promise.resolve();
+export function saveSettings(patch: Partial<Settings>): Promise<Settings> {
+  const run = settingsLock.then(async () => {
+    const s = { ...(await getSettings()), ...patch };
+    await local.set({ settings: s });
+    return s;
+  });
+  settingsLock = run.catch(() => undefined);
+  return run;
 }
 
 // ---------- sessions ----------

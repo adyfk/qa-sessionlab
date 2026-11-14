@@ -26,6 +26,18 @@ bisa menguji dengannya.
 | **6 bahasa** | English, Bahasa Indonesia, Español, Português (BR), 日本語, 简体中文 — mengikuti browser atau dipilih di Pengaturan. |
 | **Privat** | Tanpa server, tanpa analitik, tanpa kode jarak jauh. |
 
+## Kasus penggunaan
+
+Jawaban langkah demi langkah untuk masalah yang paling sering dicari tim QA:
+
+- [Cara login banyak akun di website yang sama di Chrome](https://adyfk.github.io/qa-sessionlab/id/solutions/multiple-accounts-same-site/)
+- [Cara menguji role dan izin user (RBAC) secara berdampingan](https://adyfk.github.io/qa-sessionlab/id/solutions/test-user-roles-permissions-rbac/)
+- [Pakai ulang login manual di Playwright (storageState)](https://adyfk.github.io/qa-sessionlab/id/solutions/playwright-storagestate-from-manual-login/)
+- [Biarkan agen AI menguji aplikasi sebagai banyak user (MCP)](https://adyfk.github.io/qa-sessionlab/id/solutions/ai-agent-browser-testing-mcp/)
+- [Tulis laporan bug lengkap dari Chrome secara otomatis](https://adyfk.github.io/qa-sessionlab/id/solutions/bug-report-console-network-chrome/)
+- [Uji aplikasi sebagai perangkat, bahasa dan jaringan berbeda sekaligus](https://adyfk.github.io/qa-sessionlab/id/solutions/test-different-devices-locales-network/)
+- [Perbandingan: profil Chrome vs incognito vs browser terpisah vs QA SessionLab](https://adyfk.github.io/qa-sessionlab/id/compare/)
+
 ## Instalasi (1 menit)
 
 1. **[⬇ Unduh qa-sessionlab.zip](https://github.com/adyfk/qa-sessionlab/releases/latest/download/qa-sessionlab.zip)** (rilis terbaru) lalu ekstrak.

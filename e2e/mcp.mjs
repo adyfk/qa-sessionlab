@@ -48,6 +48,11 @@ const startMcp = (token) => {
 
 await call('saveSettings', { patch: { agentEnabled: true, agentPort: PORT } });
 const { token } = await call('agentStatus');
+await sleep(1500); // let the install migration run; it must not revert our port (regression: unlocked settings writes)
+const st0 = await call('getState');
+const { token: token2 } = await call('agentStatus');
+check('Token is stable (no concurrent regeneration)', token2 === token && st0.settings.agentToken === token);
+check('Settings survive concurrent writes (port kept)', st0.settings.agentPort === PORT && st0.settings.agentEnabled === true, `port ${st0.settings.agentPort} vs ${PORT}`);
 let bad = startMcp('wrong-token');
 await sleep(2500);
 const badStatus = await bad.tool('qsl_status');

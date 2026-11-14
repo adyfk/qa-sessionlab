@@ -20,15 +20,31 @@ let lastError = '';
 let retryTimer: ReturnType<typeof setTimeout> | undefined;
 let retryDelay = 750;
 
-export function agentStatus() { return { status, lastError }; }
+export function agentStatus() {
+  // Opening Settings → AI control is a good moment to retry immediately instead of waiting for back-off.
+  if (status !== 'connected') void connect();
+  return { status, lastError };
+}
 
-export async function ensureToken() {
-  const s = await getSettings();
-  if (s.agentToken) return s.agentToken;
-  const bytes = crypto.getRandomValues(new Uint8Array(18));
-  const token = btoa(String.fromCharCode(...bytes)).replace(/[+/=]/g, '').slice(0, 24);
-  await saveSettings({ agentToken: token });
-  return token;
+/**
+ * Single-flight: concurrent callers (auto-connect, Settings page, MCP status) must all get the same
+ * token. Without this, two callers could each generate one and the user would copy a stale token.
+ */
+let tokenInFlight: Promise<string> | null = null;
+export function ensureToken(): Promise<string> {
+  tokenInFlight ??= (async () => {
+    try {
+      const s = await getSettings();
+      if (s.agentToken) return s.agentToken;
+      const bytes = crypto.getRandomValues(new Uint8Array(18));
+      const token = btoa(String.fromCharCode(...bytes)).replace(/[+/=]/g, '').slice(0, 24);
+      await saveSettings({ agentToken: token });
+      return (await getSettings()).agentToken;
+    } finally {
+      tokenInFlight = null;
+    }
+  })();
+  return tokenInFlight;
 }
 
 export function startAgentBridge(h: Handler) {

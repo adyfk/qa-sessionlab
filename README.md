@@ -30,6 +30,18 @@ a bug recorder that writes the report for you, test-data tools, and an MCP bridg
 | **6 languages** | English, Bahasa Indonesia, Español, Português (BR), 日本語, 简体中文 — follows the browser or pick one in Settings. |
 | **Private** | No servers, no analytics, no remote code. |
 
+## Use cases
+
+Step-by-step answers for the problems QA teams search for most:
+
+- [How to log in to multiple accounts on the same website in Chrome](https://adyfk.github.io/qa-sessionlab/solutions/multiple-accounts-same-site/)
+- [How to test user roles and permissions (RBAC) side by side](https://adyfk.github.io/qa-sessionlab/solutions/test-user-roles-permissions-rbac/)
+- [Reuse a manual browser login in Playwright (storageState)](https://adyfk.github.io/qa-sessionlab/solutions/playwright-storagestate-from-manual-login/)
+- [Let an AI agent test your web app as multiple users (MCP)](https://adyfk.github.io/qa-sessionlab/solutions/ai-agent-browser-testing-mcp/)
+- [Write complete bug reports from Chrome automatically](https://adyfk.github.io/qa-sessionlab/solutions/bug-report-console-network-chrome/)
+- [Test one web app as different devices, locales and networks at once](https://adyfk.github.io/qa-sessionlab/solutions/test-different-devices-locales-network/)
+- [Comparison: Chrome profiles vs incognito vs separate browsers vs QA SessionLab](https://adyfk.github.io/qa-sessionlab/compare/)
+
 ## Install (1 minute)
 
 1. **[⬇ Download qa-sessionlab.zip](https://github.com/adyfk/qa-sessionlab/releases/latest/download/qa-sessionlab.zip)** (latest release) and unzip it.
